@@ -23,6 +23,10 @@ const target = {
     child: 'child',
   },
   field4: [2, 4, 8],
+  field5: function(a) {
+    return a;
+  },
+  field6: Symbol(1),
 };
 target.target = target;
 
