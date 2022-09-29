@@ -145,3 +145,5 @@ BFC布局规则：
 ## 总结
 
 > 以上例子都体现了：BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。因为BFC内部的元素和外部的元素绝对不会互相影响，因此，当BFC外部存在浮动时，它不应该影响BFC内部Box的布局，BFC会通过变窄，而不与浮动有重叠。同样的，当BFC内部有浮动时，为了不影响外部元素的布局，BFC计算高度时会包括浮动的高度。避免margin重叠也是这样的一个道理。
+
+[什么是BFC？看这一篇就够了](https://blog.csdn.net/sinat_36422236/article/details/88763187?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166442153016800186589917%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166442153016800186589917&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-88763187-null-null.142^v50^pc_rank_34_2,201^v3^control_2&utm_term=bfc&spm=1018.2226.3001.4187)
