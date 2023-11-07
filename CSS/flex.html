@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+        display: flex;
+        width: 500px;
+        margin: 20px;
+        border: 1px solid#000;
+    }
+
+    #A {
+        width: 100px;
+        height: 200px;
+        background-color: aqua;
+        flex: 1;
+    }
+
+    #B {
+        width: 200px;
+        height: 200px;
+        background-color: chocolate;
+        flex: 1;
+        /* 等价于
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: 0%;
+        */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="A">left</div>
+    <div id="B">right</div>
+  </div>
+</body>
+</html>
