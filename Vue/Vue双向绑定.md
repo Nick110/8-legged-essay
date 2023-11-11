@@ -25,7 +25,7 @@ v-on绑定了表单元素的input事件
 <text-document v-bind:title.sync="doc.title"></text-document>
 ```
 
-(.sync 修饰符)[https://v2.cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6]
+[.sync 修饰符](https://v2.cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6)
 
 
 ## 数据劫持
