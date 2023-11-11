@@ -8,6 +8,26 @@
 v-model是v-on和v-bind的结合指令，v-on事件监听，v-bind实现数据到视图的单项绑定
 v-on绑定了表单元素的input事件
 
+### .sync修饰符
+在有些情况下，我们可能需要对一个 prop 进行“双向绑定”。不幸的是，真正的双向绑定会带来维护上的问题，因为子组件可以变更父组件，且在父组件和子组件两侧都没有明显的变更来源。
+
+```JavaScript
+
+<text-document
+  v-bind:title="doc.title"
+  v-on:update:title="doc.title = $event"
+></text-document>
+```
+
+为了方便起见，我们为这种模式提供一个缩写，即 `.sync` 修饰符：
+
+```JavaScript
+<text-document v-bind:title.sync="doc.title"></text-document>
+```
+
+(.sync 修饰符)[https://v2.cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6]
+
+
 ## 数据劫持
 什么是数据劫持？
 它通过监听数据的变化来自动更新视图，同时也可以反过来，通过监听视图的变化来更新数据（Vue2.x使用的是 `Object.defineProperty` ,Vue3.x使用的是Es6中的 `Proxy` 方法）。
