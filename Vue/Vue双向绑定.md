@@ -26,7 +26,7 @@ v-on绑定了表单元素的input事件
 ## 双向数据绑定实现步骤
 
 1. 首先在 VUE 初始化的时候，对数据(data)进行劫持监听（响应化处理），需要设置一个监听器`（Observer）`, 用来监听所有属性。
-监听器中使用到了ES5中的 `Object.defineProperty()` 方法，该方法能够劫持对象的 `setter 和 getter`方法，已达到监听数据的效果。
+监听器中使用到了ES5中的 `Object.defineProperty()` 方法，该方法能够劫持对象的 `setter 和 getter`方法，已达到监听数据的效果。getter添加订阅者Watcher，setter发布通知
 
 
 2. 对模版执行编译操作，需要一个 指令解析器`（Compile）`，对每个节点元素进行扫描和解析（元素节点/文本节点）。
