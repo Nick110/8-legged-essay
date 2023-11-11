@@ -39,7 +39,8 @@ v-on绑定了表单元素的input事件
 
 4. 如果data中的属性发生了变化，会先找到对应的消息订阅器`（Dep）`, 通知所有的 订阅者`（Watcher）`执行更新函数。
 
-![image](https://github.com/Nick110/8-legged-essay/assets/30553189/722d7254-1d92-4c8a-ba26-dcdc0722082c)
+![image](https://github.com/Nick110/8-legged-essay/assets/30553189/f75a572f-7d63-404d-8be2-494d212c33c4)
+
 
 
 
