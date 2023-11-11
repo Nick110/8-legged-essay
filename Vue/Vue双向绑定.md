@@ -12,18 +12,18 @@ v-on绑定了表单元素的input事件
 在有些情况下，我们可能需要对一个 prop 进行“双向绑定”。不幸的是，真正的双向绑定会带来维护上的问题，因为子组件可以变更父组件，且在父组件和子组件两侧都没有明显的变更来源。
 
 ```JavaScript
-
-<text-document
-  v-bind:title="doc.title"
-  v-on:update:title="doc.title = $event"
-></text-document>
+父组件调用子组件
+<Child :money="total" v-on:update:money="total = $event"/>
 ```
 
 为了方便起见，我们为这种模式提供一个缩写，即 `.sync` 修饰符：
 
 ```JavaScript
-<text-document v-bind:title.sync="doc.title"></text-document>
+<Child :money.sync="total"/>
 ```
+`<button @click="$emit('update:money', money-100)">`
+
+而子组件内也必须用`'update:money'`事件名去触发响应
 
 [.sync 修饰符](https://v2.cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6)
 
